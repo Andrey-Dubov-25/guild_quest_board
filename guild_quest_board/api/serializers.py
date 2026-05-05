@@ -171,7 +171,7 @@ class QuestCancelledSerializer(serializers.Serializer):
 
         if quest.status != Quest.QuestStatus.AVAILABLE:
             raise serializers.ValidationError(
-                'Нельзя отменить квест не в статусе "available".'
+                'Нельзя отменить квест не в статусе available.'
             )
 
         if not user.is_tavern_keeper():
@@ -233,7 +233,7 @@ class QuestCompletedSerializer(serializers.Serializer):
     def validate(self, data):
         """
         Валидация статуса и доступности квеста для завершения:
-        - квест не в статусе `in_progress`;
+        - квест не в статусе in_progress;
         - квест уже завершён;
         - квест принадлежит другому пользователю.
         """
@@ -242,7 +242,7 @@ class QuestCompletedSerializer(serializers.Serializer):
 
         if quest.status != Quest.QuestStatus.IN_PROGRESS:
             raise serializers.ValidationError(
-                'Нельзя завершить квест не в статусе "in_progress".'
+                'Нельзя завершить квест не в статусе in_progress.'
             )
 
         if quest.status in [

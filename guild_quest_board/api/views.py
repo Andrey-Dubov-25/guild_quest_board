@@ -121,10 +121,10 @@ class QuestViewSet(viewsets.ModelViewSet):
         """Отмена квеста (только для тавернщика)."""
         quest = get_object_or_404(Quest, pk=pk)
         serializer = self.get_serializer(
-            data=request.data, context={'quest': quest}
+            data=request.data, context={'quest': quest, 'request': request}
         )
         if serializer.is_valid(raise_exception=True):
-            quest.status = 'cancelled'
+            quest.status = Quest.QuestStatus.CANCELLED
             quest.save()
             return Response(
                 {'message': 'Квест отменён'}, status=status.HTTP_200_OK
