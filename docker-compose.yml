@@ -1,0 +1,25 @@
+volumes:
+  pg_data:
+  static:
+
+services:
+  db:
+    image: postgres:13.10
+    env_file: .env
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+  guild_quest_board:
+    image: 25andrey25/guild_backend
+    env_file: .env
+    depends_on:
+      - db
+    volumes:
+      - static:/guild_quest_board_static
+  gateway:
+    image: 25andrey25/guild_gateway
+    ports:
+      - 8000:80 
+    depends_on:
+      - guild_quest_board
+    volumes:
+      - static:/staticfiles
