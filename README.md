@@ -229,7 +229,7 @@ git clone https://github.com/Andrey-Dubov-25/guild_quest_board
 ```
 cd guild_quest_board
 ```
-```
+
 
 Cоздать и активировать виртуальное окружение:
 
@@ -274,7 +274,6 @@ git clone https://github.com/Andrey-Dubov-25/guild_quest_board
 ```
 cd guild_quest_board
 ```
-```
 
 Запустить контейнеры:
 
@@ -283,11 +282,13 @@ docker compose up --build
 ```
 
 Применить миграции:
+
 ```
 docker compose exec guild_quest_board python manage.py migrate
 ```
 
 Собрать статику:
+
 ```
 docker compose exec guild_quest_board python manage.py collectstatic --noinput
 ```
