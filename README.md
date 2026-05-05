@@ -190,7 +190,7 @@ DELETE /api/quests/{id}/
 204 - Удачное выполнение запроса  
 401 - Пользователь неавторизирован
 403 - Нет прав доступа  
-404 - Рецепт не найден
+404 - Квест не найден
 
 
 **Взять квест в работу**
@@ -253,7 +253,7 @@ Content type: application/json
 
 
 ## Ссылка на проект
-[Проект Foodgram](https://github.com/Andrey-Dubov-25/guild_quest_board)
+[Проект GQB](https://github.com/Andrey-Dubov-25/guild_quest_board)
 
 ### Как запустить проект:
 
