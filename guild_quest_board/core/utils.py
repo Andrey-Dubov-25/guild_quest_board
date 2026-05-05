@@ -14,7 +14,7 @@ def get_password(data):
 
 
 def get_quest(self):
-    """Возвращает quest."""
+    """Возвращает квест."""
     return self.context['quest']
 
 

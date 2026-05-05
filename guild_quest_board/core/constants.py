@@ -12,5 +12,5 @@ END_QUEST_LEN: int = 30
 MIN_MEANING_FOR_VALIDATOR_SCORE: int = 1
 MAX_MEANING_FOR_VALIDATOR_SCORE: int = 50
 MONSTERS: list[str] = ['Goblin', 'WolfSkeleton', 'Adult', 'Black', 'Dragon']
-GET_MONSTERS = 'https://www.dnd5eapi.co/api/2014/monsters/'
-TIMEOUT = 15
+GET_MONSTERS: str = 'https://www.dnd5eapi.co/api/2014/monsters/'
+TIMEOUT: int = 15
