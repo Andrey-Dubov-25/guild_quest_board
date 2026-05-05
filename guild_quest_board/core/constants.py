@@ -1,0 +1,16 @@
+FIRST_NAME_LEN: int = 150
+LAST_NAME_LEN: int = 150
+EMAIL_LEN: int = 254
+USERNAME_LEN: int = 150
+PASSWORD_LEN: int = 256
+COMMENT_LEN: int = 256
+NAME_QUEST_LEN: int = 150
+NAME_QUEST_TYPE_LEN: int = 150
+MONSTER_LEN: int = 128
+AWARD_LEN: int = 128
+END_QUEST_LEN: int = 30
+MIN_MEANING_FOR_VALIDATOR_SCORE: int = 1
+MAX_MEANING_FOR_VALIDATOR_SCORE: int = 50
+MONSTERS: list[str] = ['Goblin', 'WolfSkeleton', 'Adult', 'Black', 'Dragon']
+GET_MONSTERS = 'https://www.dnd5eapi.co/api/2014/monsters/'
+TIMEOUT = 15
